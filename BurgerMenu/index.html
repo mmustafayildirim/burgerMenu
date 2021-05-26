@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header><a href="#" clas="logo"><img src="img/icons8-burger-king-48.png" alt=""></a>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Yeni urunler</a></li>
+                <li><a href="#">İletisim</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Muhtesem Menuler<br><span id="menuhead">Menu 1</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam dolore necessitatibus ab, voluptas
+                    est, tempora autem asperiores ullam voluptatem, corrupti nesciunt? Magni qui dolore, alias ullam
+                    facere architecto soluta sapiente voluptate velit voluptas nisi fuga quisquam beatae corporis harum!
+                    Minima quidem </p>
+                <a href="#">Daha Fazlası İçin </a>
+            </div>
+            <div class="imgBox">
+                <img src="img/menu.png" class="burgerKing">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/menu.png"
+                    onclick="imgSlider('img/menu.png'); changeCircleBackgrund('#185494'); changeMenuText('Menu 1')">
+            </li>
+            <li><img src="img/menu2.png"
+                    onclick="imgSlider('img/menu2.png'); changeCircleBackgrund('#FAAF18'); changeMenuText('Menu 2')">
+            </li>
+            <li><img src="img/menu3.png"
+                    onclick="imgSlider('img/menu3.png'); changeCircleBackgrund('#EE1D23'); changeMenuText('Menu 3')">
+            </li>
+        </ul>
+        <ul class="sci">
+            <li><img src="img/twitter.png"></li>
+            <li><img src="img/instagram.png"></li>
+            <li><img src="img/facebook.png"></li>
+        </ul>
+
+    </section>
+
+    <script>
+        function imgSlider(anything) {
+            document.querySelector(".burgerKing").src = anything;
+        }
+        function changeCircleBackgrund(color) {
+            const circle = document.querySelector(".circle");
+            const spanChange = document.getElementById("menuhead");
+            circle.style.background = color;
+            spanChange.style.color = color;
+        }
+        function changeMenuText(text) {
+
+            document.getElementById("menuhead").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
